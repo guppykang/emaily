@@ -1,22 +1,11 @@
 //require allows you to access the dependencies
 //this is  a node.js file
 const express = require('express');
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
-
+require('./services/passport');
 const app = express();
 
-//this creates a route handler. get does this for us
-//the back slash is for the certain route "localhost:5000/" aka root route
-//req is the incoming request
-//res is the response
-//req and res are parameters for the arrow function below
-// app.get('/', (req, res) => {
-//   res.send({hi : "there"})
-// })
-
-passport.use(new GoogleStrategy());
-
+//importing the auth routes and calling the function on the app as a paramteter
+require('./routes/authRoutes')(app);
 //during runtime heroku will tell us which port to use through the env variables
 const PORT  = process.env.PORT || 5000;
 
