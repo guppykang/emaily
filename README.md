@@ -3,7 +3,10 @@ Using express and node.js for route handling
 Using Mongoose and MongoDB for storing user information
 
 Important Information : Code must contain the following file(s) to work   
-config/Key.js  :  
+  
+Need to create environment variables via host (I'm using heroku)  
+  
+config/dev.js  :  
 module.exports = {  
   googleClientID : 'FOUND ON PERSONAL GCP',  
   googleClientSecret : 'FOUDN ON PERSONAL GCP',  
