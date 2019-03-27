@@ -25,6 +25,8 @@ passport.use(
     clientSecret: keys.googleClientSecret,
     callbackURL: '/auth/google/callback',
     proxy: true
+    //was using  this line between the times google shutdown google+ api and
+    //passport had no support for it
     //userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   }, (accessToken, refreshToken, profile, done) => {
       User.findOne({googleId: profile.id})
