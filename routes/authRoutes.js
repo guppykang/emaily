@@ -2,7 +2,7 @@ const passport = require('passport');
 
 module.exports = app => {
   app.get('/', (req, res) => {
-    res.send({hi : "there"})
+    res.send({hi : "mom"})
   })
 
 
@@ -17,7 +17,6 @@ module.exports = app => {
 
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.send(req.user);
   });
 
   app.get('/api/current_user', (req, res) => {
