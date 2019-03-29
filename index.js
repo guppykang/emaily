@@ -1,4 +1,4 @@
-//require allows you to access the dependencies
+//hi mom //require allows you to access the dependencies
 //this is  a node.js file
 const express = require('express');
 const mongoose = require('mongoose');
