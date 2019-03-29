@@ -3,6 +3,8 @@ Using express and node.js for route handling
 Using Mongoose and MongoDB for storing user information
 
 Important Information : Code must contain the following file(s) to work   
+
+run "npm install" in both the root directory and the client directory   
   
 Need to create environment variables via host (I'm using heroku)  
   
