@@ -7,13 +7,9 @@ module.exports = app => {
   app.use(express.static(path.join(__dirname, '../client/build')));
 
 
-  app.get('/', (req, res) => {
-    res.send({hi : "mom"})
-  })
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
-  });
+  // app.get('/', (req, res) => {
+  //   res.send({hi : "mom"})
+  // })
 
   app.get(
     '/auth/google',
@@ -31,6 +27,10 @@ module.exports = app => {
   app.get('/api/current_user', (req, res) => {
 
     res.send(req.user);
+  });
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
   });
 };
 
